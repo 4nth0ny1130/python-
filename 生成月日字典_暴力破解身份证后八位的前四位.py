@@ -21,6 +21,7 @@ for i in range(0,3):
     if d == '12':
         break
 month = month[1:]
+
 date = []
 for i in month:
     for j in day:
@@ -34,13 +35,8 @@ date.remove('0631')
 date.remove('0931')
 date.remove('1131')
 
-date =str(date)                           #怎么尝试打印出来都是['0101','0102','0103','0104','0105']这样的,要不就死活不换行
-date= date.replace("\'","")               #没办法了就用这么蠢的方法,有更好的方法把它的输出变成一行一个的欢迎提交Issues,感谢OTZ
-date= date.replace("[","")                
-date= date.replace("]","")
-date= date.replace(",","")
-date= date.replace(" ","\n")
-
 f = open(r'C:\Users\min\Desktop\生成文件\月日.txt',"a")   #自己改文件路径
-print (date,file = f)
+
+for line in date:             #变成一行一个
+    f.write(line+'\n')
 f.close()
