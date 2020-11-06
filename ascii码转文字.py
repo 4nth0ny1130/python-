@@ -1,4 +1,4 @@
-a = input("输入ascii码,以 分隔:")
+a = input("输入ascii码,以,分隔:")
 
 a = a.split(",") #用,切分字符串放进一个列表
 
